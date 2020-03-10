@@ -16,10 +16,10 @@ function (
             {
                 onHighlightClick: function (feature, track) 
                 {
+                  var features = JSON.parse(localStorage.getItem('ipaFeatures'));
                   var highlightFlag = parseInt(localStorage.getItem('highlightFlag'));
                   if(highlightFlag === 1)
                   {
-                       var features = JSON.parse(localStorage.getItem('ipaFeatures'));
                        var states = ['unknown', 'peak', 'nopeak', 'peakStart', 'peakEnd'];
                        features.forEach(f => 
                        {
@@ -40,7 +40,6 @@ function (
                    }
                    else
                    {
-                     var features = JSON.parse(localStorage.getItem('ipaFeatures'));
                      features = features.filter(function (f)
                      {
                         if (f.start !== feature.get('start')) 
@@ -55,7 +54,7 @@ function (
                         'end' : feature.get('end')
                      }
                      console.log("removing label: ", removeJSON);
-                     sendPost(removeJSON);
+                     //sendPost(removeJSON);
                    }
                    track.redraw();
                    localStorage.setItem('ipaFeatures', JSON.stringify(features));
@@ -63,7 +62,7 @@ function (
                 
                 highlightColor: function (feature, track) 
                 {
-                    var states = {0: '#f00', 1: '#0f05', 2: '#ff05', 3: '#d3034f', 4: '#d30303'};
+                    var states = {0: 'rgba(100,100,100,.4)', 1: '#0f05', 2: '#ff05', 3: 'rgba(255,0,0,.4)', 4: 'rgba(255,150,0,.4)'};
                     return states[feature.get(track.name) || 0];
                 },
                 

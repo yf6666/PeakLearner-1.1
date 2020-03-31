@@ -74,10 +74,8 @@ function (
                     const effectiveCallback = event => {
                         event.stopPropagation();
                         if (mouse.isRight(event)) {
-                            console.log('here');
                             this.getConf('onHighlightRightClick', [feature, this]);
                         } else {
-                            console.log('here2');
                             this.getConf('onHighlightClick', [feature, this]);
                         }
                     };

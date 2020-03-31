@@ -1,3 +1,11 @@
+# Release 1.16.8     2020-02-05 01:37:43 UTC
+
+## Bug fixes
+
+ * Fixed an regression that made corrupted features around bgzip block
+   boundaries. Related to @gmod/tabix 1.2.0->1.3.2 fileOffset based feature ID.
+   Bug affected JBrowse 1.16.7 (issue #1464)
+
 # Release 1.16.7     2020-01-24 20:23:47 UTC
 
 ## Minor improvements
@@ -57,6 +65,10 @@
 
  * Make VCF based features have distinct file IDs for similar overlapping features
    with same ID, ALT, REF, etc. Thanks @scottcain for the report (@cmdcolin)
+
+ * Fixed a race-condition that prevented the ability to properly query using
+   upper-case characters in for example /?loc=UPPERCASE. Thanks to @scottcain
+   for reporting (pull #1435, @cmdcolin)
 
 # Release 1.16.6     2019-07-12 01:20:19 UTC
 

@@ -12,11 +12,9 @@ before_install:
 #  - sudo /usr/sbin/create-munge-key
   - sudo service munge start
 
-default:
-    step:
-        script:
-            cd jbrowse
-            python tests/cluster_tests/clusterTest.py
+script:
+    cd jbrowse
+    python tests/cluster_tests/clusterTest.py
 
 env:
   global:

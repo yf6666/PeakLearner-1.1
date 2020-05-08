@@ -1,10 +1,7 @@
 language: python
 
 python:
-  - "2.7"
-
-os:
-    - osx
+  - 2.7.10
 
 before_install:
   - python --version
@@ -16,10 +13,10 @@ before_install:
   - sudo apt-get install -y slurm-llnl
 #  - sudo /usr/sbin/create-munge-key
   - sudo service munge start
-  - cd jbrowse/tests/cluster_tests
+  - cd jbrowse
 
 script:
-    python clusterTest.py
+  - python testing.py
 
 env:
   global:

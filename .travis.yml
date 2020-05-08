@@ -15,7 +15,6 @@ before_install:
 
 script:
     python tests/cluster_tests/clusterTest.py
-    python testing.py
 
 env:
   global:

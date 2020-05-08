@@ -4,6 +4,8 @@ import unittest
 import subprocess
 
 class ClusterTest(unittest.TestCase):
+    def testPass(self):
+        return
 
     def test_create_model(self):
         #This next block is our simulation of the cluster and using Dr. Hocking's R code

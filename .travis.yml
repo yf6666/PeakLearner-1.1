@@ -12,9 +12,10 @@ before_install:
   - sudo apt-get install -y slurm-llnl
 #  - sudo /usr/sbin/create-munge-key
   - sudo service munge start
+  - cd jbrowse/tests/cluster_tests
 
 script:
-    python jbrowse/tests/cluster_tests/clusterTest.py
+    python clusterTest.py
 
 env:
   global:

@@ -17,7 +17,6 @@ before_install:
   - cd jbrowse
 
 script:
-    ./ourServer.py
     python testing.py
 
 env:

@@ -8,6 +8,7 @@ before_install:
 #  - sudo /etc/init.d/slurmctld restart
 #  - sudo /etc/init.d/slurmd restart
   - sudo apt-get install -y slurm-llnl
+  - sudo pip3 install requests
 #  - sudo /usr/sbin/create-munge-key
   - sudo service munge start
   - cd jbrowse

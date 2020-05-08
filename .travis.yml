@@ -1,8 +1,5 @@
 language: python
 
-python:
-  - 2.7.10
-
 before_install:
   - python --version
   - sudo mkdir /etc/slurm-llnl

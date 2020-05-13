@@ -27,9 +27,4 @@ branches:
         test-branch
 
 notifications:
-  email:
-    recipients:
-        - jcj52@nau.edu
-    on_success: always
-    on_failure: always
-  # slack: capstoneteam2019-2020:99sHd15zMUNsTJEWiIUvlrF3
+  slack: capstoneteam2019-2020:99sHd15zMUNsTJEWiIUvlrF3

@@ -14,13 +14,25 @@ before_install:
 #  - sudo /etc/init.d/slurmctld restart
 #  - sudo /etc/init.d/slurmd restart
   - sudo apt-get install -y slurm-llnl
-  - sudo pip install requests
 #  - sudo /usr/sbin/create-munge-key
   - sudo service munge start
   - cd jbrowse
+  - pip install -r requirements.txt
+
+env:
+    global:
+        - MOZ_HEADLESS=1
+    addons:
+        firefox: latest
+
+before_script:
+    - sleep 3
+    - ./ourServer.py
+    - sleep 3
 
 script:
   - python tests/cluster_tests/clusterTest.py
+  - python testing.py
 
 branches:
     only:

@@ -3,9 +3,11 @@ language: python
 python:
     - "2.7"
 
+virtualenv:
+    system_site_packages: true
+
 before_install:
   - python --version
-  - sudo pip install requests
   - sudo mkdir /etc/slurm-llnl
   - sudo cp slurm.conf /etc/slurm-llnl
 #  - cp batchtools.conf.R tests/testthat
@@ -25,4 +27,9 @@ branches:
         test-branch
 
 notifications:
-  slack: capstoneteam2019-2020:99sHd15zMUNsTJEWiIUvlrF3
+  email:
+    recipients:
+    - jcj52@nau.edu
+    on_success: always
+    on_failure: always
+  # slack: capstoneteam2019-2020:99sHd15zMUNsTJEWiIUvlrF3

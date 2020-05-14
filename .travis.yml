@@ -3,8 +3,8 @@ language: python
 python:
     - "2.7"
 
-virtualenv:
-    system_site_packages: true
+#virtualenv:
+#    system_site_packages: true
 
 before_install:
   - python --version
@@ -18,13 +18,13 @@ before_install:
   - sudo service munge start
   - cd jbrowse
 #  - pip install -r requirements.txt
-```
-env:
-    global:
-        - MOZ_HEADLESS=1
-    addons:
-        firefox: latest
-```
+
+#env:
+#    global:
+#        - MOZ_HEADLESS=1
+#    addons:
+#        firefox: latest
+
 before_script:
     - sleep 3
 #    - ./ourServer.py

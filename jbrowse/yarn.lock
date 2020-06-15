@@ -2692,12 +2692,19 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-dijit@1.16.0, dijit@^1.14.2:
+dijit@1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/dijit/-/dijit-1.16.0.tgz#ae42e650ab98711b8ec2397deb0af595db5fb68b"
   integrity sha512-g6kZrAJBLAO0KNBHQYumD83gLZ2+52PWCRx/41ek1QBICO7qzUinIvIiUqSXepgJ4jREyFLkbWdMsM2JHwglYQ==
   dependencies:
     dojo "1.16.0"
+
+dijit@^1.14.2:
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/dijit/-/dijit-1.16.3.tgz#7888e144edab454eca7f08bb7b7aaa66f5b5e098"
+  integrity sha512-D1dvhLYU2qXQ92rK49z0pQvskQphKyA9j9b5CyljwrNWDSbikIFzKobF9W+srEAMHRD10mHSJEHu5F/Fkyfg3w==
+  dependencies:
+    dojo "1.16.3"
 
 dir-glob@^2.0.0:
   version "2.2.2"
@@ -2744,10 +2751,15 @@ dojo-webpack-plugin@^2.8.5:
     tmp "0.0.30"
     webpack-plugin-compat "1.0.3"
 
-dojo@1.16.0, dojo@^1.14.2, dojo@^1.9.0:
+dojo@1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.16.0.tgz#e242cc7d73ae829e60562a2c00dfd827482fdb59"
   integrity sha512-DUiXyoLK6vMF5BPr/qiMLTxDMfiM9qlzN1jxfDsVfuvB/CwhYpNxA/M4mbqKN8PCVGLmccXBJbfmFJPP5+zmzw==
+
+dojo@1.16.3, dojo@^1.14.2, dojo@^1.9.0:
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.16.3.tgz#f9d2343184b5e5ffda2ee5666029da20508e1013"
+  integrity sha512-+mPovtmbULx5V69lWji496gMfhXuL1WCC0KBq0hig4Tz6WGAYxTOJV6ch3bewNzSJHmaHiSsIMYkW8jcUrhLIQ==
 
 dojox@^1.14.2:
   version "1.16.0"
